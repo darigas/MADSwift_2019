@@ -19,7 +19,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var optionB: UIButton!
     @IBOutlet weak var optionC: UIButton!
     @IBOutlet weak var optionD: UIButton!
-    @IBOutlet weak var nextQuestion: UIButton!
+    @IBOutlet weak var QuestionImageText: UIView!
+    @IBOutlet weak var HeaderView: UIView!
+    @IBOutlet weak var AnswerView: UIView!
     
     let allQuestions = QuestionList()
     var questionNumber: Int = 0
@@ -30,8 +32,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateQuestion()
         updateScreen()
+        updateQuestion()
+        optionD.layer.cornerRadius = 5
+        optionC.layer.cornerRadius = 5
+        optionB.layer.cornerRadius = 5
+        optionA.layer.cornerRadius = 5
+        questionText.font = UIFont(name: "Copperplate", size: questionText.font.pointSize)
+        correctAnswers.font = UIFont(name: "Copperplate", size: questionText.font.pointSize)
+        wrongAnswers.font = UIFont(name: "Copperplate", size: questionText.font.pointSize)
+        optionD.titleLabel?.font = UIFont(name: "Copperplate", size: 20)
+        optionC.titleLabel?.font = UIFont(name: "Copperplate", size: 20)
+        optionB.titleLabel?.font = UIFont(name: "Copperplate", size: 20)
+        optionA.titleLabel?.font = UIFont(name: "Copperplate", size: 20)
+        HeaderView.layer.cornerRadius = 5
+        QuestionImageText.layer.cornerRadius = 5
+        AnswerView.layer.cornerRadius = 5
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -50,6 +66,7 @@ class ViewController: UIViewController {
             wrongScore += 1
         }
         questionNumber += 1
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(ViewController.updateQuestion), userInfo: nil, repeats: false)
     }
     
     @IBAction func optionBPressed(_ sender: UIButton) {
@@ -67,6 +84,7 @@ class ViewController: UIViewController {
             wrongScore += 1
         }
         questionNumber += 1
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(ViewController.updateQuestion), userInfo: nil, repeats: false)
     }
     
     @IBAction func optionCPressed(_ sender: UIButton) {
@@ -84,6 +102,7 @@ class ViewController: UIViewController {
             wrongScore += 1
         }
         questionNumber += 1
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(ViewController.updateQuestion), userInfo: nil, repeats: false)
     }
     
     @IBAction func optionDPressed(_ sender: UIButton) {
@@ -101,9 +120,10 @@ class ViewController: UIViewController {
             wrongScore += 1
         }
         questionNumber += 1
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(ViewController.updateQuestion), userInfo: nil, repeats: false)
     }
     
-    func updateQuestion() {
+    @objc func updateQuestion() {
         if questionNumber <= allQuestions.questions.count - 1 {
             questionImage.image = UIImage(named: (allQuestions.questions[questionNumber].questionImage))
             questionText.text = allQuestions.questions[questionNumber].questionText
@@ -115,10 +135,6 @@ class ViewController: UIViewController {
         }
         else {
             performSegue(withIdentifier: "showEndView", sender: self.view)
-            /*let alert = UIAlertController(title: "End", message: "Do you want to start again?", preferredStyle: .alert)
-            let restartAction = UIAlertAction(title: "Restart", style: .default, handler: {action in self.restartQuiz()})
-            alert.addAction(restartAction)
-            present(alert, animated: true, completion: nil)*/
         }
         updateScreen()
     }
@@ -131,14 +147,17 @@ class ViewController: UIViewController {
     }
     
     func updateScreen() {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//            self.showRightAnswer(right: self.selectedAnswer.description)
+//        }
         optionA.isUserInteractionEnabled = true
         optionB.isUserInteractionEnabled = true
         optionC.isUserInteractionEnabled = true
         optionD.isUserInteractionEnabled = true
-        updateColor(color: UIColor.lightGray, button: optionA)
-        updateColor(color: UIColor.lightGray, button: optionB)
-        updateColor(color: UIColor.lightGray, button: optionC)
-        updateColor(color: UIColor.lightGray, button: optionD)
+        updateColor(color: UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 0.8), button: optionA)
+        updateColor(color: UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 0.8), button: optionB)
+        updateColor(color: UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 0.8), button: optionC)
+        updateColor(color: UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 0.8), button: optionD)
         correctAnswers.text = String(ViewController.correctScore) + "/15"
         wrongAnswers.text = String(wrongScore) + "/15"
     }
@@ -151,15 +170,11 @@ class ViewController: UIViewController {
         ViewController.correctScore = 0
     }
     
-    @IBAction func nextQuestionPressed(_ sender: UIButton) {
-        updateQuestion()
-    }
-    
     func updateColor(color: UIColor, button: UIButton) {
         button.backgroundColor = color
     }
     
-    func showRightAnswer(right: String) {
+    @objc func showRightAnswer(right: String) {
         if right == "A" {
             updateColor(color: UIColor.green, button: optionA)
         }

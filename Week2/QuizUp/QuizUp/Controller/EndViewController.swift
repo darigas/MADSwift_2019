@@ -22,6 +22,17 @@ class EndViewController: UIViewController {
         super.viewDidLoad()
         getScore()
         getPhrase()
+        restartButton.layer.cornerRadius = 5
+        restartButton.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
+        restartButton.titleLabel?.font = UIFont(name: "Copperplate", size: 20)
+        scoreLabel.font = UIFont(name: "Copperplate", size: scoreLabel.font.pointSize)
+        phraseLabel.font = UIFont(name: "Copperplate", size: phraseLabel.font.pointSize)
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "background")
+        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+        phraseLabel.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
+        scoreLabel.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
         // Do any additional setup after loading the view.
     }
     
