@@ -36,10 +36,12 @@ class EndViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //Showing the final score
     func getScore(){
         scoreLabel.text = "You've guessed " + String(customController.showScore()) + " out of 15."
     }
     
+    //Showing the performance level according to the score
     func getPhrase(){
         if customController.showScore() >= 0 && customController.showScore() <= 5{
             phraseLabel.text = "Poor..."
@@ -59,6 +61,7 @@ class EndViewController: UIViewController {
         restart()
     }
     
+    //Going back to the start of the quiz if restart button is pressed
     func restart(){
         customController.setScoreZero()
         performSegue(withIdentifier: "restart", sender: self)

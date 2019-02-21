@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+//Enumeration for case answers
 enum Answer: CustomStringConvertible {
     case A
     case B
@@ -25,6 +25,7 @@ enum Answer: CustomStringConvertible {
     }
 }
 
+//Question class
 class Question  {
     let questionImage: String
     let questionText: String

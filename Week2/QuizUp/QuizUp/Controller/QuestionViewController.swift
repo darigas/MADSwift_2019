@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
+    //Declaration of controlles on QuestionViewController
     @IBOutlet weak var correctAnswers: UILabel!
     @IBOutlet weak var wrongAnswers: UILabel!
     @IBOutlet weak var questionText: UILabel!
@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var HeaderView: UIView!
     @IBOutlet weak var AnswerView: UIView!
     
+    //Local variables
     let allQuestions = QuestionList()
     var questionNumber: Int = 0
     static var correctScore: Int = 0
@@ -51,6 +52,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    //Action on button pressed
     @IBAction func optionAPressed(_ sender: UIButton) {
         optionA.isUserInteractionEnabled = false
         optionB.isUserInteractionEnabled = false
@@ -123,6 +125,7 @@ class ViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(ViewController.updateQuestion), userInfo: nil, repeats: false)
     }
     
+    //Showing next question in the list of  question, if there is no question next, EndViewController is shown
     @objc func updateQuestion() {
         if questionNumber <= allQuestions.questions.count - 1 {
             questionImage.image = UIImage(named: (allQuestions.questions[questionNumber].questionImage))
@@ -139,6 +142,7 @@ class ViewController: UIViewController {
         updateScreen()
     }
     
+    //Restart of the quiz, setting all scores to zero
     func restartQuiz() {
         //correctScore = 0
         wrongScore = 0
@@ -146,6 +150,7 @@ class ViewController: UIViewController {
         updateQuestion()
     }
     
+    //Updating buttons and indicators of correct and wrong answers
     func updateScreen() {
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
 //            self.showRightAnswer(right: self.selectedAnswer.description)
@@ -162,18 +167,22 @@ class ViewController: UIViewController {
         wrongAnswers.text = String(wrongScore) + "/15"
     }
     
+    //Acessor method to get score in next ViewController
     func showScore() -> Int{
         return ViewController.correctScore
     }
     
+    //Setting score to zero to restart question
     func setScoreZero(){
         ViewController.correctScore = 0
     }
     
+    //Updating color of UIButton
     func updateColor(color: UIColor, button: UIButton) {
         button.backgroundColor = color
     }
     
+    //Show right answer by checking the string matching
     @objc func showRightAnswer(right: String) {
         if right == "A" {
             updateColor(color: UIColor.green, button: optionA)

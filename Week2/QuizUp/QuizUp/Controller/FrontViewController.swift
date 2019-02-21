@@ -14,7 +14,7 @@ class FrontViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     
-    
+    //UI part
     override func viewDidLoad() {
         super.viewDidLoad()
         startButton.layer.cornerRadius = 5
@@ -30,6 +30,7 @@ class FrontViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //On pressing of start button next QuestionViewController is shown
     @IBAction func startButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "startQuiz", sender: self)
     }
