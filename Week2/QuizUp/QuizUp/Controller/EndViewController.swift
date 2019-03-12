@@ -64,6 +64,7 @@ class EndViewController: UIViewController {
     //Going back to the start of the quiz if restart button is pressed
     func restart(){
         customController.setScoreZero()
+        //dismiss(animated: true, completion: nil)
         performSegue(withIdentifier: "restart", sender: self)
     }
     /*
