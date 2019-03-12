@@ -14,10 +14,16 @@ class FrontViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     
+    @IBOutlet weak var playerNameField: UITextField!
     //UI part
     override func viewDidLoad() {
         super.viewDidLoad()
         startButton.layer.cornerRadius = 5
+        playerNameField.layer.cornerRadius = 5
+        playerNameField.font = UIFont(name: "Copperplate", size: movieLabel.font.pointSize)
+        playerNameField.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
+        playerNameField.contentVerticalAlignment = .center
+        playerNameField.textAlignment = .center
         movieLabel.font = UIFont(name: "Copperplate", size: movieLabel.font.pointSize)
         startButton.titleLabel?.font = UIFont(name: "Copperplate", size: 20)
         startButton.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
