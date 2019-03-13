@@ -8,6 +8,13 @@
 
 import UIKit
 
+//protocol AddPlayerDelegate {
+//    func didCreatePlayer(player: Player)
+//}
+
+var players = [Player]()
+var currentPlayer: Player = Player(playerName: "player", score: 0)
+
 class FrontViewController: UIViewController {
 
     @IBOutlet weak var movieLabel: UILabel!
@@ -15,39 +22,67 @@ class FrontViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     
     @IBOutlet weak var playerNameField: UITextField!
+    
     //UI part
+    
+//    var delegate: AddPlayerDelegate?
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         startButton.layer.cornerRadius = 5
+        
         playerNameField.layer.cornerRadius = 5
         playerNameField.font = UIFont(name: "Copperplate", size: movieLabel.font.pointSize)
         playerNameField.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
         playerNameField.contentVerticalAlignment = .center
         playerNameField.textAlignment = .center
-        movieLabel.font = UIFont(name: "Copperplate", size: movieLabel.font.pointSize)
+        
         startButton.titleLabel?.font = UIFont(name: "Copperplate", size: 20)
         startButton.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
+        
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "background")
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
+        
         movieLabel.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
-        // Do any additional setup after loading the view.
+        movieLabel.font = UIFont(name: "Copperplate", size: movieLabel.font.pointSize)
     }
     
     //On pressing of start button next QuestionViewController is shown
     @IBAction func startButtonPressed(_ sender: UIButton) {
+        
+        addPlayer()
+//        addPlayerTapped()
         performSegue(withIdentifier: "startQuiz", sender: self)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func addPlayer(){
+        
+        guard playerNameField.text != "" else {
+            
+            let alert = UIAlertController.init(title: "Error", message: "Fill out your name", preferredStyle: .alert)
+            let okButton = UIAlertAction.init(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        currentPlayer.playerName = playerNameField.text!
     }
-    */
-
+//
+//    @objc func addPlayerTapped() {
+//        guard playerNameField.text != "" else {
+//
+//            let alert = UIAlertController.init(title: "Error", message: "Fill out your name", preferredStyle: .alert)
+//            let okButton = UIAlertAction.init(title: "OK", style: .cancel, handler: nil)
+//            alert.addAction(okButton)
+//            self.present(alert, animated: true, completion: nil)
+//            return
+//        }
+//        let newPlayer = Player.init(playerName: playerNameField.text!, score: 0)
+//        delegate?.didCreatePlayer(player: newPlayer)
+//    }
 }

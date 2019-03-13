@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     var right: Bool = false
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         updateScreen()
         updateQuestion()

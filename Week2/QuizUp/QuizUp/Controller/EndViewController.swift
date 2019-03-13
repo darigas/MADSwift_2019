@@ -16,24 +16,55 @@ class EndViewController: UIViewController {
     
     @IBOutlet weak var restartButton: UIButton!
     
+    @IBOutlet weak var scoreButton: UIButton!
+    
     var customController = ViewController.self()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         getScore()
         getPhrase()
+        
+        let somePlayer = Player(playerName: "Aigerim", score: 15)
+        currentPlayer.score = customController.showScore()
+        players.append(currentPlayer)
+        players.append(somePlayer)
+        
+//        let defaults = UserDefaults.standard
+//        defaults.set(try? PropertyListEncoder().encode(currentPlayer), forKey: "Player")
+        
+        let keyForPlayers = "Players"
+        
+        func save(_ players: [Player]) {
+            let data = players.map {
+                try? JSONEncoder().encode($0)
+            }
+            UserDefaults.standard.set(data, forKey: keyForPlayers)
+        }
+        
+        save(players)
+        
         restartButton.layer.cornerRadius = 5
         restartButton.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
         restartButton.titleLabel?.font = UIFont(name: "Copperplate", size: 20)
+        
+        scoreButton.layer.cornerRadius = 5
+        scoreButton.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
+        scoreButton.titleLabel?.font = UIFont(name: "Copperplate", size: 20)
+        
         scoreLabel.font = UIFont(name: "Copperplate", size: scoreLabel.font.pointSize)
+        scoreLabel.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
+        
         phraseLabel.font = UIFont(name: "Copperplate", size: phraseLabel.font.pointSize)
+        phraseLabel.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
+        
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "background")
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
-        phraseLabel.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
-        scoreLabel.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
-        // Do any additional setup after loading the view.
+        //Do any additional setup after loading the view.
     }
     
     //Showing the final score
@@ -67,14 +98,8 @@ class EndViewController: UIViewController {
         //dismiss(animated: true, completion: nil)
         performSegue(withIdentifier: "restart", sender: self)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func scoreButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "showScoreBoard", sender: self)
     }
-    */
-
 }

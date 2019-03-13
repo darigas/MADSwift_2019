@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7029DB6C221C0D3300FA3534 /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7029DB6B221C0D3300FA3534 /* EndViewController.swift */; };
 		7029DB6E221C6D5E00FA3534 /* FrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7029DB6D221C6D5E00FA3534 /* FrontViewController.swift */; };
+		7058C80C22390FF00023442C /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7058C80B22390FF00023442C /* PlayerTableViewCell.swift */; };
+		7058C80E223910870023442C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7058C80D223910870023442C /* Player.swift */; };
+		7058C810223943DF0023442C /* ScoreBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7058C80F223943DF0023442C /* ScoreBoardViewController.swift */; };
 		70EB86CD221946350052DA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB86CC221946350052DA45 /* AppDelegate.swift */; };
 		70EB86CF221946350052DA45 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB86CE221946350052DA45 /* QuestionViewController.swift */; };
 		70EB86D2221946350052DA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70EB86D0221946350052DA45 /* Main.storyboard */; };
@@ -41,6 +44,9 @@
 /* Begin PBXFileReference section */
 		7029DB6B221C0D3300FA3534 /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 		7029DB6D221C6D5E00FA3534 /* FrontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontViewController.swift; sourceTree = "<group>"; };
+		7058C80B22390FF00023442C /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		7058C80D223910870023442C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		7058C80F223943DF0023442C /* ScoreBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardViewController.swift; sourceTree = "<group>"; };
 		70EB86C9221946350052DA45 /* QuizUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EB86CC221946350052DA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70EB86CE221946350052DA45 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +114,8 @@
 		70EB86CB221946350052DA45 /* QuizUp */ = {
 			isa = PBXGroup;
 			children = (
+				70EB86D0221946350052DA45 /* Main.storyboard */,
+				70EB86D3221946380052DA45 /* Assets.xcassets */,
 				70EB86FC221A9CA30052DA45 /* Model */,
 				70EB86FA221946510052DA45 /* Controller */,
 				70EB86FB2219465B0052DA45 /* View */,
@@ -141,6 +149,7 @@
 				70EB86CE221946350052DA45 /* QuestionViewController.swift */,
 				7029DB6B221C0D3300FA3534 /* EndViewController.swift */,
 				7029DB6D221C6D5E00FA3534 /* FrontViewController.swift */,
+				7058C80F223943DF0023442C /* ScoreBoardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -148,8 +157,7 @@
 		70EB86FB2219465B0052DA45 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				70EB86D0221946350052DA45 /* Main.storyboard */,
-				70EB86D3221946380052DA45 /* Assets.xcassets */,
+				7058C80B22390FF00023442C /* PlayerTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +167,7 @@
 			children = (
 				70EB86FD221A9D110052DA45 /* Question.swift */,
 				70EB86FF221AA8860052DA45 /* QuestionList.swift */,
+				7058C80D223910870023442C /* Player.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,8 +316,11 @@
 				7029DB6E221C6D5E00FA3534 /* FrontViewController.swift in Sources */,
 				70EB86FE221A9D110052DA45 /* Question.swift in Sources */,
 				7029DB6C221C0D3300FA3534 /* EndViewController.swift in Sources */,
+				7058C80C22390FF00023442C /* PlayerTableViewCell.swift in Sources */,
 				70EB8700221AA8860052DA45 /* QuestionList.swift in Sources */,
 				70EB86CF221946350052DA45 /* QuestionViewController.swift in Sources */,
+				7058C80E223910870023442C /* Player.swift in Sources */,
+				7058C810223943DF0023442C /* ScoreBoardViewController.swift in Sources */,
 				70EB86CD221946350052DA45 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
