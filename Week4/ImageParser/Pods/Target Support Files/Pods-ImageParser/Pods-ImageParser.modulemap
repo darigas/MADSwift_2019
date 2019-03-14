@@ -1,0 +1,6 @@
+framework module Pods_ImageParser {
+  umbrella header "Pods-ImageParser-umbrella.h"
+
+  export *
+  module * { export * }
+}

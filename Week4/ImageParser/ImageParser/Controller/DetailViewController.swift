@@ -7,24 +7,31 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DetailViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageTitle: UILabel!
 
-        // Do any additional setup after loading the view.
+    var image: Image?
+    
+    static func instantiate(image: Image) -> DetailViewController {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        viewController.image = image
+        return viewController
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if let image = image {
+            imageView.sd_setImage(with: URL(string: image.url))
+            imageTitle.text = image.title
+            imageTitle.font = UIFont(name: "Didot", size: 14)
+            imageView.layer.cornerRadius = 10
+            imageView.layer.masksToBounds = true
+        }
     }
-    */
-
 }
