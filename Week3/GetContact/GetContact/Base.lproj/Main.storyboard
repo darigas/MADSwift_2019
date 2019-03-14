@@ -41,12 +41,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J9k-Dy-CnM">
+                                                    <rect key="frame" x="315" y="21" width="30" height="30"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="I49-2j-EkY"/>
+                                                        <constraint firstAttribute="width" constant="30" id="wDC-AQ-Okf"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="HyC-dF-kYn" secondAttribute="trailing" constant="16" id="2BS-Gs-sN8"/>
                                                 <constraint firstItem="Kkl-jz-ECp" firstAttribute="top" secondItem="HyC-dF-kYn" secondAttribute="bottom" constant="8" id="DXX-ai-OTT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="J9k-Dy-CnM" secondAttribute="trailing" constant="5" id="VQD-lg-nMJ"/>
                                                 <constraint firstItem="Kkl-jz-ECp" firstAttribute="leading" secondItem="34Q-p7-4AE" secondAttribute="leading" constant="16" id="eMT-3X-7Ie"/>
                                                 <constraint firstAttribute="trailing" secondItem="Kkl-jz-ECp" secondAttribute="trailing" constant="16" id="hsH-ti-f6g"/>
+                                                <constraint firstItem="J9k-Dy-CnM" firstAttribute="top" secondItem="34Q-p7-4AE" secondAttribute="topMargin" constant="15" id="rrt-Fa-rAh"/>
                                                 <constraint firstItem="HyC-dF-kYn" firstAttribute="top" secondItem="34Q-p7-4AE" secondAttribute="top" constant="12" id="vD6-Sh-xmz"/>
                                                 <constraint firstItem="HyC-dF-kYn" firstAttribute="leading" secondItem="34Q-p7-4AE" secondAttribute="leading" constant="16" id="yxK-Xz-gOa"/>
                                             </constraints>
@@ -54,6 +64,7 @@
                                         <connections>
                                             <outlet property="nameLabel" destination="HyC-dF-kYn" id="34u-aQ-FTF"/>
                                             <outlet property="phoneLabel" destination="Kkl-jz-ECp" id="YzR-3F-RC7"/>
+                                            <outlet property="tagView" destination="J9k-Dy-CnM" id="9aH-EI-elc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -68,7 +79,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Contacts" id="jPv-1G-vui"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="sD8-tm-WfJ"/>
                     <connections>
                         <outlet property="tableView" destination="2eK-fi-Cfo" id="FxU-2h-3Af"/>
                     </connections>

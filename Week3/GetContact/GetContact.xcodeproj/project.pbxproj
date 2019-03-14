@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7058C8082237A7BC0023442C /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7058C8072237A7BC0023442C /* ColorCollectionViewCell.swift */; };
+		7058C859223A99070023442C /* TagColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7058C858223A99070023442C /* TagColorExtension.swift */; };
 		ED3417C4221EE023002B5B64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3417C3221EE023002B5B64 /* AppDelegate.swift */; };
 		ED3417C9221EE023002B5B64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED3417C7221EE023002B5B64 /* Main.storyboard */; };
 		ED3417CB221EE026002B5B64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED3417CA221EE026002B5B64 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		7058C8072237A7BC0023442C /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		7058C858223A99070023442C /* TagColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagColorExtension.swift; sourceTree = "<group>"; };
 		ED3417C0221EE023002B5B64 /* GetContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED3417C3221EE023002B5B64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED3417C8221EE023002B5B64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7058C857223A98EC0023442C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7058C858223A99070023442C /* TagColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		ED3417B7221EE023002B5B64 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		ED3417C2221EE023002B5B64 /* GetContact */ = {
 			isa = PBXGroup;
 			children = (
+				7058C857223A98EC0023442C /* Extensions */,
 				ED3417DD221EF460002B5B64 /* View */,
 				ED3417D8221EE160002B5B64 /* Controller */,
 				ED3417D5221EE0A7002B5B64 /* Model */,
@@ -173,6 +184,7 @@
 			files = (
 				7058C8082237A7BC0023442C /* ColorCollectionViewCell.swift in Sources */,
 				ED3417DC221EE1C5002B5B64 /* AddContactViewController.swift in Sources */,
+				7058C859223A99070023442C /* TagColorExtension.swift in Sources */,
 				ED3417DF221EF473002B5B64 /* ContactTableViewCell.swift in Sources */,
 				ED3417D7221EE0B3002B5B64 /* Contact.swift in Sources */,
 				ED3417DA221EE1A6002B5B64 /* ContactListViewController.swift in Sources */,

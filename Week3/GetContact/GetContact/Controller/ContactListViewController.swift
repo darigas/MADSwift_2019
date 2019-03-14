@@ -19,7 +19,10 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
     //Adding items to Controller
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        contacts = Contact.get()
+        print(contacts)
+        
         let addButton = UIBarButtonItem.init(title: "Add", style: .done, target: self, action: #selector(addTapped))
         
         self.navigationItem.rightBarButtonItem = addButton        
@@ -34,6 +37,7 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
         super.setEditing(editing, animated: animated)
         tableView.setEditing(editing, animated: animated)
     }
+    
     
     //Adding Contact to TableView
     @objc
@@ -60,9 +64,9 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
         
         let contact = contacts[indexPath.row]
         cell.setContact(contact)
-        cell.backgroundColor = contact.tag.color.withAlphaComponent(0.85)
+//        cell.backgroundColor = contact.tag.color.withAlphaComponent(0.85)
+        cell.setColor(contact.tag.color)
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -73,9 +77,9 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
         
         if editingStyle == .delete {
             contacts.remove(at: indexPath.row)
+            Contact.save(contacts)
             tableView.reloadData()
         }
-        
     }
     
     // MARK: - TableView delegate

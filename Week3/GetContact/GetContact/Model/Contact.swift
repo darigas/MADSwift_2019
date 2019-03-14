@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum TagColor {
+enum TagColor: String {
     case brown
     case blue
     case cyan
@@ -35,4 +35,52 @@ class Contact {
         self.tag = tag
     }
     
+    static func save(_ contacts: [Contact]) {
+        
+        var firstnames = [String]()
+        var lastnames = [String]()
+        var phones = [String]()
+        var tags = [TagColor.RawValue]()
+        
+        for contact in contacts {
+            firstnames.append(contact.firstname)
+            lastnames.append(contact.lastname)
+            phones.append(contact.phone)
+            tags.append(contact.tag.rawValue)
+        }
+        
+        print (contacts)
+        
+        UserDefaults.standard.set(firstnames, forKey: "firstnames")
+        UserDefaults.standard.set(lastnames, forKey: "lastnames")
+        UserDefaults.standard.set(phones, forKey: "phones")
+        UserDefaults.standard.set(tags, forKey: "tags")
+        
+    }
+    
+    static func saveOneContact(_ contact: Contact) {
+        
+        var contacts = Contact.get()
+        contacts.append(contact)
+        Contact.save(contacts)
+    }
+    
+    static func get() -> [Contact] {
+        var contacts = [Contact]()
+        
+        let defaults = UserDefaults.standard
+        let firstnames = defaults.stringArray(forKey: "firstnames") ?? [String]()
+        
+        let lastnames = defaults.stringArray(forKey: "lastnames") ?? [String]()
+        let phones = defaults.stringArray(forKey: "phones") ?? [String]()
+        
+        let tags = defaults.stringArray(forKey: "tags") ?? [String]()
+        
+        for index in 0..<firstnames.count {
+            let contact = Contact(firstname: firstnames[index], lastname: lastnames[index], phone: phones[index], tag: TagColor(rawValue: tags[index])!)
+            contacts.append(contact)
+            print(contacts)
+        }
+        return contacts
+    }
 }

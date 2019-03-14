@@ -19,6 +19,8 @@ class ContactTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     
+    @IBOutlet weak var tagView: UIView!
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -29,4 +31,8 @@ class ContactTableViewCell: UITableViewCell {
         phoneLabel.text = contact.phone
     }
     
+    func setColor(_ color: UIColor) {
+        tagView.backgroundColor = color.withAlphaComponent(0.85)
+        tagView.layer.cornerRadius = 15
+    }
 }
