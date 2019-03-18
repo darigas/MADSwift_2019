@@ -27,24 +27,24 @@ class EndViewController: UIViewController {
         getScore()
         getPhrase()
         
-        let somePlayer = Player(playerName: "Aigerim", score: 15)
-        currentPlayer.score = customController.showScore()
+//        let somePlayer = Player(playerName: "Aigerim", score: 15)
+        let currentPlayer = Player.init(playerName: currentPlayerName, score: customController.showScore())
         players.append(currentPlayer)
-        players.append(somePlayer)
-        
+        Player.saveOnePlayer(currentPlayer)
+                
 //        let defaults = UserDefaults.standard
 //        defaults.set(try? PropertyListEncoder().encode(currentPlayer), forKey: "Player")
-        
-        let keyForPlayers = "Players"
-        
-        func save(_ players: [Player]) {
-            let data = players.map {
-                try? JSONEncoder().encode($0)
-            }
-            UserDefaults.standard.set(data, forKey: keyForPlayers)
-        }
-        
-        save(players)
+//
+//        let keyForPlayers = "Players"
+//
+//        func save(_ players: [Player]) {
+//            let data = players.map {
+//                try? JSONEncoder().encode($0)
+//            }
+//            UserDefaults.standard.set(data, forKey: keyForPlayers)
+//        }
+//
+//        save(players)
         
         restartButton.layer.cornerRadius = 5
         restartButton.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)

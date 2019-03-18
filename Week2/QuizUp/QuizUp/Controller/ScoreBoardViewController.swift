@@ -34,19 +34,22 @@ class ScoreBoardViewController: UIViewController, UITableViewDelegate, UITableVi
 //            return playerCell
 //        }
         
-        let keyForPlayers = "Players"
+//        let keyForPlayers = "Players"
+//
+//        func load() -> [Player] {
+//            guard let encodedData = UserDefaults.standard.array(forKey: keyForPlayers) as? [Data] else {
+//                return []
+//            }
+//
+//            return encodedData.map {
+//                try! JSONDecoder().decode(Player.self, from: $0)
+//            }
+//        }
+//
+//        let allPlayers = load()
         
-        func load() -> [Player] {
-            guard let encodedData = UserDefaults.standard.array(forKey: keyForPlayers) as? [Data] else {
-                return []
-            }
-            
-            return encodedData.map {
-                try! JSONDecoder().decode(Player.self, from: $0)
-            }
-        }
+        let allPlayers = Player.get()
         
-        let allPlayers = load()
         let sortedPlayers = allPlayers.sorted {
             (id1, id2) -> Bool in return id1.score > id2.score
         }

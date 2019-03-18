@@ -13,7 +13,8 @@ import UIKit
 //}
 
 var players = [Player]()
-var currentPlayer: Player = Player(playerName: "player", score: 0)
+var currentPlayerName: String = ""
+//var currentPlayer: Player = Player(playerName: "player", score: 0)
 
 class FrontViewController: UIViewController {
 
@@ -70,7 +71,7 @@ class FrontViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
             return
         }
-        currentPlayer.playerName = playerNameField.text!
+        currentPlayerName = playerNameField.text!
     }
 //
 //    @objc func addPlayerTapped() {
