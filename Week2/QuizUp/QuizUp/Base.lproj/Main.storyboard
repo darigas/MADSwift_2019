@@ -415,7 +415,7 @@
                                 <rect key="frame" x="20" y="617" width="335" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Restart Button"/>
+                                <state key="normal" title="Restart"/>
                                 <connections>
                                     <action selector="restartButtonPressed:" destination="uxa-gU-r6G" eventType="touchUpInside" id="Dk3-J8-9Cs"/>
                                 </connections>
@@ -455,6 +455,6 @@
         <image name="medium1" width="1431.5" height="862"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="v4c-h8-vAX"/>
+        <segue reference="rUr-e2-SiA"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,7 +12,7 @@ import UIKit
 //    func didCreatePlayer(player: Player)
 //}
 
-var players = [Player]()
+//var players = [Player]()
 var currentPlayerName: String = ""
 //var currentPlayer: Player = Player(playerName: "player", score: 0)
 

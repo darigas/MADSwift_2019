@@ -17,7 +17,7 @@ class ScoreBoardViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var restartButton: UIButton!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return players.count
+        return Player.get().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,7 +55,7 @@ class ScoreBoardViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         print(sortedPlayers)
         
-        playerCell.setPlayer(sortedPlayers[indexPath.row])
+        playerCell.setPlayer(allPlayers[indexPath.row])
         playerCell.backgroundColor = UIColor.init(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
         return playerCell
     }

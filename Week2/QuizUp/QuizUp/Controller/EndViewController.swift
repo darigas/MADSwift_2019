@@ -29,8 +29,8 @@ class EndViewController: UIViewController {
         
 //        let somePlayer = Player(playerName: "Aigerim", score: 15)
         let currentPlayer = Player.init(playerName: currentPlayerName, score: customController.showScore())
-        players.append(currentPlayer)
-        Player.saveOnePlayer(currentPlayer)
+        Player.save(player: currentPlayer)
+//        players.append(currentPlayer)
                 
 //        let defaults = UserDefaults.standard
 //        defaults.set(try? PropertyListEncoder().encode(currentPlayer), forKey: "Player")

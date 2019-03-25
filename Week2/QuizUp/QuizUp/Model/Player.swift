@@ -17,56 +17,31 @@ struct Player: Codable {
         self.score = score
     }
     
-    static func save(_ players: [Player]) {
-        var playerNames = [String]()
+    static func get() -> [Player] {
+        var players = [Player]()
+        let defaults = UserDefaults.standard
+        let names = defaults.stringArray(forKey: "names") ?? [String]()
+        let scores = defaults.stringArray(forKey: "scores") ?? [String]()
+        
+        for index in 0..<names.count {
+            let player = Player(playerName: names[index], score: Int(scores[index])!)
+            players.append(player)
+        }
+        return players.sorted(by: { $0.score > $1.score })
+    }
+    
+    static func save(player: Player) {
+        var players = get()
+        players.append(player)
+        var names = [String]()
         var scores = [String]()
         
         for player in players {
-            playerNames.append(player.playerName)
+            names.append(player.playerName)
             scores.append(String(player.score))
         }
         
-        print(players)
-        UserDefaults.standard.set(playerNames, forKey: "playerNames")
+        UserDefaults.standard.set(names, forKey: "names")
         UserDefaults.standard.set(scores, forKey: "scores")
     }
-    
-    static func saveOnePlayer(_ player: Player) {
-        var players = Player.get()
-        players.append(player)
-        Player.save(players)
-    }
-    
-    static func get() -> [Player] {
-        var players = [Player]()
-        
-        let defaults = UserDefaults.standard
-        let playerNames = defaults.stringArray(forKey: "playerNames") ?? [String]()
-        let scores = defaults.stringArray(forKey: "scores") ?? [String]()
-        
-        for index in 0..<playerNames.count {
-            let player = Player(playerName: playerNames[0], score: Int(scores[0])!)
-            players.append(player)
-            print(players)
-        }
-        return players
-    }
-//    let keyForPlayers = "Players"
-//
-//    func save(_ players: [Player]) {
-//        let data = players.map {
-//            try? JSONEncoder().encode($0)
-//        }
-//        UserDefaults.standard.set(data, forKey: keyForPlayers)
-//    }
-//
-//    func load() -> [Player] {
-//        guard let encodedData = UserDefaults.standard.array(forKey: keyForPlayers) as? [Data] else {
-//            return []
-//        }
-//
-//        return encodedData.map {
-//            try! JSONDecoder().decode(Player.self, from: $0)
-//        }
-//    }
 }
