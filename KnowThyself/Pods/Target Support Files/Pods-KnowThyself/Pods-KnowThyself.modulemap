@@ -1,0 +1,6 @@
+framework module Pods_KnowThyself {
+  umbrella header "Pods-KnowThyself-umbrella.h"
+
+  export *
+  module * { export * }
+}

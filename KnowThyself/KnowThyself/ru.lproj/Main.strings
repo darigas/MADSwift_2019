@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1kM-b9-yDM"; */
+"1kM-b9-yDM.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rnU-fS-if6"; */
+"rnU-fS-if6.normalTitle" = "Button";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "yJJ-IC-VEg"; */
+"yJJ-IC-VEg.text" = "Джек смотрит на мир как на поле деятельности, среди которого всегда можно найти такое занятие, которое будет ему интересно и выгодно, главное – найти нужный момент и приложить правильные усилия. Легок на подъем, не боится командировок и переездов. Очень работоспособен, большой труженик. Старается делать все быстро и с максимальной пользой. Легко отказывается от тех проектов, которые исчерпали себя. Умеет обращаться с финансами.\r\n\r\nНе боится идти на риск, уверен в своей способности правильно воспользоваться тенденциями времени. Работает на опережение, знает, что \"завтра будет поздно\". Любит использовать новейшие технологии. Его оптимистичные прогнозы не всегда сбываются. Может вляпаться в авантюру.\r\n\r\nОптимист, в любых ситуациях не унывает. Никогда не будет ныть.";
