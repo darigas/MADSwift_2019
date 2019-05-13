@@ -52,3 +52,8 @@ class Test(models.Model):
     _26 = models.BooleanField(default=False)
     _27 = models.BooleanField(default=False)
     _28 = models.BooleanField(default=False)
+
+
+class TypeResult(models.Model):
+    type = models.CharField(max_length=255)
+

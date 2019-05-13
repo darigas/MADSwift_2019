@@ -1,11 +1,17 @@
 from django.test import TestCase
 from selenium import webdriver
 from time import sleep
+from selenium.webdriver.chrome.options import Options
 
 
 class Click(TestCase):
+    type_result = "something"
+
+
     def __init__(self, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17, _18, _19, _20, _21,
                  _22, _23, _24, _25, _26, _27, _28):
+        # options = Options()
+        # options.add_argument("headless")
         self.driver = webdriver.Chrome('/Users/darigummy/Desktop/selenium/chromedriver')
         self.driver.get('http://www.google.com/xhtml')
         self.navigate(_1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17, _18, _19, _20, _21,
@@ -283,8 +289,15 @@ class Click(TestCase):
         out = self.driver.find_element_by_xpath('/html/body/table[2]/tbody/tr/td[2]/center/table/tbody/tr/td/p[1]/a')
         url = out.get_attribute("href")
         self.driver.get(url)
-        type= self.driver.find_element_by_xpath('/html/body/table[2]/tbody/tr/td[2]/h1')
-        print(type.text)
+        type = self.driver.find_element_by_xpath('/html/body/table[2]/tbody/tr/td[2]/h1')
+        self.type_result = type.text
+        to_result(type.text)
+        # print(type.text)
+
+
+
+def to_result(value):
+    Click.type_result = value
 
 
 def main():
