@@ -12,12 +12,9 @@ import SwiftyJSON
 class Type {
     var name: String
     var description: String
-//    var url: String
     
-    init(json: JSON) {
-        name = json["name"].stringValue
-        description = json["description"].stringValue
-        
-//        url = "http://127.0.0.1:8000/types"
+    init(name: String, description: String){
+        self.name = name
+        self.description = description
     }
 }

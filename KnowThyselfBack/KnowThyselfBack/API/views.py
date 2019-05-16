@@ -2,8 +2,8 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from bs4 import BeautifulSoup
 from rest_framework.decorators import api_view
-from .models import Type
-from .serializers import TypeSerializer, TestSerializer, TypeResultSerializer
+from .models import Type, Quadra, TypeShort
+from .serializers import TypeSerializer, TestSerializer, TypeShortSerializer, QuadraSerializer
 from rest_framework.response import Response
 from rest_framework.settings import api_settings
 from rest_framework.renderers import JSONRenderer
@@ -35,3 +35,19 @@ def runtest(request):
             print(Click.type_result)
             return HttpResponse(Click.type_result)
         return HttpResponse(Click.type_result)
+
+
+@api_view(['GET'])
+def quadras(request):
+    if request.method == "GET":
+        quadras = Quadra.objects.all()
+        serializer = QuadraSerializer(quadras, many=True)
+        return Response(serializer.data)
+
+
+@api_view(['GET'])
+def typesShort(request):
+    if request.method == "GET":
+        types = TypeShort.objects.all()
+        serializer = TypeShortSerializer(types, many=True)
+        return Response(serializer.data)

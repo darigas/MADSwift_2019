@@ -14,12 +14,12 @@ class Type(models.Model):
     objects = TypeManager()
 
     def __str__(self):
-        return self.name + " " + self.description
+        return self.name
 
 
 class TestManager(models.Model):
     def create(self):
-        test= self.create()
+        test = self.create()
         return self
 
 
@@ -56,4 +56,21 @@ class Test(models.Model):
 
 class TypeResult(models.Model):
     type = models.CharField(max_length=255)
+
+
+class Quadra(models.Model):
+    quadraName = models.CharField(max_length=255)
+    info = models.TextField(blank=False)
+    types = models.TextField(blank=False)
+
+    def __str__(self):
+        return self.quadraName
+
+
+class TypeShort(models.Model):
+    name = models.CharField(max_length=255)
+    shortDescription = models.TextField(blank=False)
+
+    def __str__(self):
+        return self.name
 

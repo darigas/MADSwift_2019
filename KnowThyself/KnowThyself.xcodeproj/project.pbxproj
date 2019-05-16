@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3912318963D61B8D450B65C7 /* Pods_KnowThyself.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E312E5CCD69CEBFEA9C566F0 /* Pods_KnowThyself.framework */; };
+		700F0165228A9B11009D5B6F /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700F0164228A9B11009D5B6F /* TestTableViewCell.swift */; };
+		700F0167228A9CA7009D5B6F /* QuestionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700F0166228A9CA7009D5B6F /* QuestionList.swift */; };
+		700F0169228A9CCB009D5B6F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700F0168228A9CCB009D5B6F /* Question.swift */; };
+		700F016B228B52FE009D5B6F /* TypesResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700F016A228B52FE009D5B6F /* TypesResultViewController.swift */; };
+		700F016D228D32E0009D5B6F /* QuardasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700F016C228D32E0009D5B6F /* QuardasViewController.swift */; };
+		700F016F228D32F8009D5B6F /* QuadraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700F016E228D32F8009D5B6F /* QuadraTableViewCell.swift */; };
+		700F0171228D3315009D5B6F /* Quadra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700F0170228D3315009D5B6F /* Quadra.swift */; };
 		706176022281C4310013B4AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706176012281C4310013B4AC /* AppDelegate.swift */; };
 		706176042281C4310013B4AC /* TypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706176032281C4310013B4AC /* TypesViewController.swift */; };
 		706176072281C4310013B4AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706176052281C4310013B4AC /* Main.storyboard */; };
@@ -40,6 +47,13 @@
 
 /* Begin PBXFileReference section */
 		3809B5352600938176796953 /* Pods-KnowThyself.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnowThyself.debug.xcconfig"; path = "Target Support Files/Pods-KnowThyself/Pods-KnowThyself.debug.xcconfig"; sourceTree = "<group>"; };
+		700F0164228A9B11009D5B6F /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		700F0166228A9CA7009D5B6F /* QuestionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionList.swift; sourceTree = "<group>"; };
+		700F0168228A9CCB009D5B6F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		700F016A228B52FE009D5B6F /* TypesResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesResultViewController.swift; sourceTree = "<group>"; };
+		700F016C228D32E0009D5B6F /* QuardasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuardasViewController.swift; sourceTree = "<group>"; };
+		700F016E228D32F8009D5B6F /* QuadraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadraTableViewCell.swift; sourceTree = "<group>"; };
+		700F0170228D3315009D5B6F /* Quadra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quadra.swift; sourceTree = "<group>"; };
 		706175FE2281C4310013B4AC /* KnowThyself.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowThyself.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		706176012281C4310013B4AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		706176032281C4310013B4AC /* TypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +164,8 @@
 			children = (
 				706176032281C4310013B4AC /* TypesViewController.swift */,
 				7061763D228222000013B4AC /* TestViewController.swift */,
+				700F016A228B52FE009D5B6F /* TypesResultViewController.swift */,
+				700F016C228D32E0009D5B6F /* QuardasViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				706176392281CACD0013B4AC /* TypeTableViewCell.swift */,
+				700F0164228A9B11009D5B6F /* TestTableViewCell.swift */,
+				700F016E228D32F8009D5B6F /* QuadraTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				706176332281C4D40013B4AC /* Type.swift */,
+				700F0166228A9CA7009D5B6F /* QuestionList.swift */,
+				700F0168228A9CCB009D5B6F /* Question.swift */,
+				700F0170228D3315009D5B6F /* Quadra.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -383,10 +404,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				706176042281C4310013B4AC /* TypesViewController.swift in Sources */,
+				700F016F228D32F8009D5B6F /* QuadraTableViewCell.swift in Sources */,
+				700F016D228D32E0009D5B6F /* QuardasViewController.swift in Sources */,
+				700F0167228A9CA7009D5B6F /* QuestionList.swift in Sources */,
 				7061763A2281CACD0013B4AC /* TypeTableViewCell.swift in Sources */,
+				700F0171228D3315009D5B6F /* Quadra.swift in Sources */,
+				700F016B228B52FE009D5B6F /* TypesResultViewController.swift in Sources */,
+				700F0169228A9CCB009D5B6F /* Question.swift in Sources */,
 				706176022281C4310013B4AC /* AppDelegate.swift in Sources */,
 				706176342281C4D40013B4AC /* Type.swift in Sources */,
 				7061763E228222000013B4AC /* TestViewController.swift in Sources */,
+				700F0165228A9B11009D5B6F /* TestTableViewCell.swift in Sources */,
 				706176362281C5980013B4AC /* TypeService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
