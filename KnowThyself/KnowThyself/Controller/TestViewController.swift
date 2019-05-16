@@ -12,21 +12,36 @@ import SwiftyJSON
 import SVProgressHUD
 import SDWebImage
 
+enum ButtonState {
+    case left
+    case right
+    case none
+    
+    func value() -> Bool {
+        switch self {
+        case .left:
+            return true
+        case .right, .none:
+            return false
+        }
+    }
+}
+
 class TestViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var testTableView: UITableView!
     @IBOutlet weak var submit: UIButton!
     
     let allQuestions = QuestionList()
-    static var allAnswers = [Bool]()
+    static var allAnswers = [ButtonState]()
     static var typeResult: String = "Undefined"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         testTableView.dataSource = self
         testTableView.delegate = self
-        for _ in 0...28 {
-            TestViewController.allAnswers.append(false)
+        for _ in 0..<28 {
+            TestViewController.allAnswers.append(.none)
         }
         self.tabBarItem.image = UIImage(named: "checked_checkbox")
         testTableView.rowHeight = UIScreen.main.fixedCoordinateSpace.bounds.height / 10
@@ -40,14 +55,21 @@ class TestViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "testCell", for: indexPath) as! TestTableViewCell
-        cell.option2.setTitle(allQuestions.questions[indexPath.row].option2, for: .normal)
-        cell.option1.setTitle(allQuestions.questions[indexPath.row].option1, for: .normal)
-        cell.setValue(indexPath.row)
-        cell.selectionStyle = .none
-        cell.option1.layer.cornerRadius = 5
-        cell.option2.layer.cornerRadius = 5
-        cell.option1.titleLabel?.font = UIFont(name: "Athelas", size: 18)
-        cell.option2.titleLabel?.font = UIFont(name: "Athelas", size: 18)
+        let q = allQuestions.questions[indexPath.row]
+
+//        print(indexPath.row)
+        cell.setQuestion(q, state: TestViewController.allAnswers[indexPath.row])
+
+        cell.leftSelectedBlock = {
+            TestViewController.allAnswers[indexPath.row] = .left
+            tableView.reloadRows(at: [indexPath], with: .none)
+        }
+
+        cell.rightSelectedBlock = {
+            TestViewController.allAnswers[indexPath.row] = .right
+            tableView.reloadRows(at: [indexPath], with: .none)
+        }
+
         return cell
     }
     
@@ -59,10 +81,22 @@ class TestViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func submitPressed(_ sender: Any) {
+//        print(TestViewController.allAnswers)
+        //check
+        for i in 0..<TestViewController.allAnswers.count {
+            if TestViewController.allAnswers[i] == .none {
+                let alert = UIAlertController(title: "Ошибка", message: "Выберите ответ из каждой пары", preferredStyle: .alert)
+                let okButton = UIAlertAction.init(title: "ОК", style: .cancel, handler: nil)
+                alert.addAction(okButton)
+                self.present(alert, animated: true)
+//                return
+            }
+        }
+        
         let allAnswers = TestViewController.allAnswers
         print (allAnswers)
         Alamofire.request("http://127.0.0.1:8000/test", method: .post, parameters:
-            ["_1": allAnswers[0], "_2": allAnswers[1], "_3": allAnswers[2], "_4": allAnswers[3], "_5": allAnswers[4], "_6": allAnswers[5], "_7": allAnswers[6], "_8": allAnswers[7], "_9": allAnswers[8], "_10": allAnswers[9], "_11": allAnswers[10], "_12": allAnswers[11], "_13": allAnswers[12], "_14": allAnswers[13], "_15": allAnswers[14], "_16": allAnswers[15], "_17": allAnswers[16], "_18": allAnswers[17], "_19": allAnswers[18], "_20": allAnswers[19], "_21": allAnswers[20], "_22": allAnswers[21], "_23": allAnswers[22], "_24": allAnswers[23], "_25": allAnswers[24], "_26": allAnswers[25], "_27": allAnswers[26], "_28": allAnswers[27]]).responseString { response in
+            ["_1": allAnswers[0].value(), "_2": allAnswers[1].value(), "_3": allAnswers[2].value(), "_4": allAnswers[3].value(), "_5": allAnswers[4].value(), "_6": allAnswers[5].value(), "_7": allAnswers[6].value(), "_8": allAnswers[7].value(), "_9": allAnswers[8].value(), "_10": allAnswers[9].value(), "_11": allAnswers[10].value(), "_12": allAnswers[11].value(), "_13": allAnswers[12].value(), "_14": allAnswers[13].value(), "_15": allAnswers[14].value(), "_16": allAnswers[15].value(), "_17": allAnswers[16].value(), "_18": allAnswers[17].value(), "_19": allAnswers[18].value(), "_20": allAnswers[19].value(), "_21": allAnswers[20].value(), "_22": allAnswers[21].value(), "_23": allAnswers[22].value(), "_24": allAnswers[23].value(), "_25": allAnswers[24].value(), "_26": allAnswers[25].value(), "_27": allAnswers[26].value(), "_28": allAnswers[27].value()]).responseString { response in
                 guard response.result.isSuccess else {
                     print("Not defined")
                     return

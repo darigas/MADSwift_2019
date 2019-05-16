@@ -2,36 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a23ca15-c96b-4900-bc0a-40fe5ecf43d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Assets.xcassets/checked_checkbox.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Assets.xcassets/checked_checkbox.imageset/checked_checkbox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Assets.xcassets/checked_checkbox.imageset/checked_checkbox@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Assets.xcassets/checked_checkbox.imageset/checked_checkbox@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Assets.xcassets/health_data.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Assets.xcassets/health_data.imageset/health_data.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Assets.xcassets/health_data.imageset/health_data@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Assets.xcassets/health_data.imageset/health_data@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Assets.xcassets/menu.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Assets.xcassets/menu.imageset/menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Assets.xcassets/menu.imageset/menu@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Assets.xcassets/menu.imageset/menu@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Model/Question.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Model/QuestionList.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/View/TestTableViewCell.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself.xcworkspace/xcuserdata/darigummy.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself.xcworkspace/xcuserdata/darigummy.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself.xcworkspace/xcuserdata/darigummy.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself.xcworkspace/xcuserdata/darigummy.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Base.lproj/Main.storyboard" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Controller/TestViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Controller/TestViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Controller/TypesViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Controller/TypesViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Model/Type.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Model/Type.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KnowThyselfBack/API/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/KnowThyselfBack/API/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KnowThyselfBack/API/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/KnowThyselfBack/API/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KnowThyselfBack/API/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/KnowThyselfBack/API/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KnowThyselfBack/API/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/KnowThyselfBack/API/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KnowThyselfBack/API/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/KnowThyselfBack/API/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KnowThyselfBack/API/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/KnowThyselfBack/API/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself/View/TestTableViewCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/View/TestTableViewCell.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KnowThyselfBack/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/KnowThyselfBack/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week2/QuizUp/QuizUp.xcodeproj/project.xcworkspace/xcuserdata/darigummy.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../Week2/QuizUp/QuizUp.xcodeproj/project.xcworkspace/xcuserdata/darigummy.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="315">
               <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -99,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1064">
@@ -299,18 +275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <marker date="1557955376492" expanded="true" signature="856:862" ph="..." />
-            <marker date="1557955376492" expanded="true" signature="19254:19287" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -350,6 +314,18 @@
             <marker date="1557999073734" expanded="true" signature="1809:1814" ph="..." />
             <marker date="1557999073734" expanded="true" signature="1883:1888" ph="..." />
             <marker date="1557999073734" expanded="true" signature="2250:2252" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1557955376492" expanded="true" signature="856:862" ph="..." />
+            <marker date="1557955376492" expanded="true" signature="19254:19287" ph="..." />
           </folding>
         </state>
       </provider>
