@@ -15,7 +15,7 @@ class TypesResultViewController: UIViewController {
     @IBOutlet weak var typeDescription: UITextView!
     @IBOutlet weak var navigationBar: UINavigationBar!
     
-    var types = [Type]()
+//    var types = [Type]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class TypesResultViewController: UIViewController {
         print(TypesViewController.types.count)
 //        print(TypesViewController.types.count)
 //        print(TestViewController.typeResult)
-        print(types)
+//        print(types)
         for i in 0..<TypesViewController.types.count {
             if TypesViewController.types[i].name == TestViewController.typeResult {
                 typeDescription.text = TypesViewController.types[i].description
@@ -39,7 +39,7 @@ class TypesResultViewController: UIViewController {
         typeDescription.font = UIFont(name: "Athelas", size: 18)
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Athelas", size: 18)!]
         let customFont = UIFont(name: "Athelas", size: 18)
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: customFont], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: customFont!], for: .normal)
     }
     
     @objc func goBack(){

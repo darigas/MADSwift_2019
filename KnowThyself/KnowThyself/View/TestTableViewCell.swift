@@ -36,16 +36,16 @@ class TestTableViewCell: UITableViewCell {
         switch state {
         case .left:
             print("left")
-            option1.backgroundColor = .yellow
-            option2.backgroundColor = .blue
+            option1.backgroundColor = .init(red: 256/255, green: 242/255, blue: 130/255, alpha: 1)
+            option2.backgroundColor = .init(red: 136/255, green: 141/255, blue: 246/255, alpha: 1)
         case .right:
             print("right")
-            option1.backgroundColor = .blue
-            option2.backgroundColor = .yellow
+            option1.backgroundColor = .init(red: 136/255, green: 141/255, blue: 246/255, alpha: 1)
+            option2.backgroundColor = .init(red: 256/255, green: 242/255, blue: 130/255, alpha: 1)
         case .none:
             print("none")
-            option1.backgroundColor = .blue
-            option2.backgroundColor = .blue
+            option1.backgroundColor = .init(red: 136/255, green: 141/255, blue: 246/255, alpha: 1)
+            option2.backgroundColor = .init(red: 136/255, green: 141/255, blue: 246/255, alpha: 1)
         }
         
     }

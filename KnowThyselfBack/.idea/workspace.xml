@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a23ca15-c96b-4900-bc0a-40fe5ecf43d5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself.xcworkspace/xcuserdata/darigummy.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself.xcworkspace/xcuserdata/darigummy.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself.xcworkspace/xcuserdata/darigummy.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself.xcworkspace/xcuserdata/darigummy.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Controller/TestViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Controller/TestViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Controller/QuardasViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Controller/QuardasViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Controller/TypeTableViewCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Controller/TypeTableViewCell.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Controller/TypesResultViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Controller/TypesResultViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Controller/TypesViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/Controller/TypesViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself/View/QuadraTableViewCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/View/QuadraTableViewCell.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KnowThyself/KnowThyself/View/TestTableViewCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../KnowThyself/KnowThyself/View/TestTableViewCell.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KnowThyselfBack/API/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/KnowThyselfBack/API/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KnowThyselfBack/API/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/KnowThyselfBack/API/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KnowThyselfBack/API/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/KnowThyselfBack/API/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KnowThyselfBack/API/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/KnowThyselfBack/API/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KnowThyselfBack/API/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/KnowThyselfBack/API/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KnowThyselfBack/API/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/KnowThyselfBack/API/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KnowThyselfBack/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/KnowThyselfBack/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,43 +31,47 @@
     <session id="-1832881882">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="16" />
+          <entry key="py" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="16" />
+          <entry key="Python" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2276" />
+          <entry key="py" value="4090" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2276" />
+          <entry key="Python" value="4090" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="675">
+              <caret line="55" selection-start-line="55" selection-end-line="67" selection-end-column="40" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <marker date="1557999239341" expanded="true" signature="1881:1886" ph="..." />
-                <marker date="1557999239341" expanded="true" signature="2097:2102" ph="..." />
+                <marker date="1558989374698" expanded="true" signature="1911:1916" ph="..." />
+                <marker date="1558989374698" expanded="true" signature="2127:2132" ph="..." />
+                <marker date="1558989374698" expanded="true" signature="2353:2358" ph="..." />
               </folding>
             </state>
           </provider>
@@ -64,41 +80,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+            <state relative-caret-position="390">
+              <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
-                <marker date="1557955376492" expanded="true" signature="856:862" ph="..." />
-                <marker date="1557955376492" expanded="true" signature="19254:19287" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1064">
-              <caret line="71" column="20" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="20" />
-              <folding>
-                <marker date="1557999073734" expanded="true" signature="1809:1814" ph="..." />
-                <marker date="1557999073734" expanded="true" signature="1883:1888" ph="..." />
-                <marker date="1557999073734" expanded="true" signature="2250:2252" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-                <marker date="1557999140203" expanded="true" signature="393:398" ph="..." />
-                <marker date="1557999140203" expanded="true" signature="518:523" ph="..." />
-                <marker date="1557999140203" expanded="true" signature="642:647" ph="..." />
+                <marker date="1559026973054" expanded="true" signature="861:867" ph="..." />
+                <marker date="1559026973054" expanded="true" signature="19259:19292" ph="..." />
               </folding>
             </state>
           </provider>
@@ -107,7 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="105">
+              <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="35" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -118,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            <state relative-caret-position="15">
+              <caret line="1" column="53" selection-end-line="1" selection-end-column="53" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -142,19 +130,18 @@
       <list>
         <option value="$PROJECT_DIR$/KnowThyselfBack/KnowThyselfBack/urls.py" />
         <option value="$PROJECT_DIR$/KnowThyselfBack/KnowThyselfBack/settings.py" />
-        <option value="$PROJECT_DIR$/KnowThyselfBack/API/tests.py" />
         <option value="$PROJECT_DIR$/KnowThyselfBack/API/models.py" />
         <option value="$PROJECT_DIR$/KnowThyselfBack/API/serializers.py" />
-        <option value="$PROJECT_DIR$/KnowThyselfBack/API/admin.py" />
         <option value="$PROJECT_DIR$/KnowThyselfBack/API/views.py" />
         <option value="$PROJECT_DIR$/KnowThyselfBack/API/urls.py" />
+        <option value="$PROJECT_DIR$/KnowThyselfBack/API/admin.py" />
+        <option value="$PROJECT_DIR$/KnowThyselfBack/API/tests.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="795" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="714" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -219,16 +206,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.27831325" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -236,6 +219,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.16987951" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -245,16 +232,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/KnowThyselfBack/KnowThyselfBack/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding>
-            <element signature="e#639#671#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KnowThyselfBack/KnowThyselfBack/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -262,70 +239,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/KnowThyselfBack/KnowThyselfBack/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <marker date="1557999140203" expanded="true" signature="393:398" ph="..." />
-            <marker date="1557999140203" expanded="true" signature="518:523" ph="..." />
-            <marker date="1557999140203" expanded="true" signature="642:647" ph="..." />
-          </folding>
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="37" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="675">
+          <caret line="55" selection-start-line="55" selection-end-line="67" selection-end-column="40" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <marker date="1557999239341" expanded="true" signature="1881:1886" ph="..." />
-            <marker date="1557999239341" expanded="true" signature="2097:2102" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1558989374698" expanded="true" signature="1911:1916" ph="..." />
+            <marker date="1558989374698" expanded="true" signature="2127:2132" ph="..." />
+            <marker date="1558989374698" expanded="true" signature="2353:2358" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="105">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="35" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/models.py">
+    <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="71" column="20" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="20" />
+        <state relative-caret-position="15">
+          <caret line="1" column="53" selection-end-line="1" selection-end-column="53" />
           <folding>
-            <marker date="1557999073734" expanded="true" signature="1809:1814" ph="..." />
-            <marker date="1557999073734" expanded="true" signature="1883:1888" ph="..." />
-            <marker date="1557999073734" expanded="true" signature="2250:2252" ph="..." />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/KnowThyselfBack/API/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        <state relative-caret-position="390">
+          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-            <marker date="1557955376492" expanded="true" signature="856:862" ph="..." />
-            <marker date="1557955376492" expanded="true" signature="19254:19287" ph="..." />
+            <marker date="1559026973054" expanded="true" signature="861:867" ph="..." />
+            <marker date="1559026973054" expanded="true" signature="19259:19292" ph="..." />
           </folding>
         </state>
       </provider>

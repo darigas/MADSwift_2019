@@ -12,12 +12,14 @@ import SwiftyJSON
 
 class TypesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var typeDescription: UILabel!
+    @IBOutlet weak var typeName: UILabel!
     @IBOutlet weak var typesTableView: UITableView!
     static var types = [Type]()
     static var shortTypes = [Type]()
     
     func getTypes() {
-        TypesViewController.types.removeAll()
+//        TypesViewController.types.removeAll()
         Alamofire.request("http://127.0.0.1:8000/types").responseJSON { response in
             guard response.result.isSuccess else {
                 print("Ошибка при запросе данных \(String(describing: response.result.error))")
@@ -33,12 +35,12 @@ class TypesViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let type = Type(name: typeNew["name"] as! String, description: typeNew["description"] as! String)
                 TypesViewController.types.append(type)
             }
-            self.typesTableView.reloadData()
+//            self.typesTableView.reloadData()
         }
     }
     
     func getShortTypes() {
-        TypesViewController.types.removeAll()
+//        TypesViewController.types.removeAll()
         Alamofire.request("http://127.0.0.1:8000/types_short").responseJSON { response in
             guard response.result.isSuccess else {
                 print("Ошибка при запросе данных \(String(describing: response.result.error))")
@@ -66,7 +68,7 @@ class TypesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         typesTableView.delegate = self
         self.tabBarItem.image = UIImage(named: "menu")
 //        typesTableView.rowHeight = UITableView.automaticDimension
-        typesTableView.rowHeight = UIScreen.main.fixedCoordinateSpace.bounds.height
+        typesTableView.rowHeight = 600
     }
     
 //    @IBAction func testButtonPressed(_ sender: AnyObject) {
@@ -92,6 +94,10 @@ class TypesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "TypesResultViewController") as! TypesResultViewController
         TestViewController.typeResult = TypesViewController.shortTypes[indexPath.row].name
         self.present(controller, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
 

@@ -13,7 +13,7 @@ import SwiftyJSON
 class TypeTableViewCell: UITableViewCell {
     
     
-    @IBOutlet weak var typeDescription: UITextView!
+    @IBOutlet weak var typeDescription: UILabel!
     @IBOutlet weak var typeName: UILabel!
     
     override func awakeFromNib() {

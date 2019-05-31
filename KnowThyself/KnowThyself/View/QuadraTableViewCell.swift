@@ -11,9 +11,7 @@ import UIKit
 class QuadraTableViewCell: UITableViewCell {
 
     @IBOutlet weak var quadraName: UILabel!
-    @IBOutlet weak var quadraInfo: UITextView!
     
-    @IBOutlet weak var quadraTypes: UITextView!
     override func awakeFromNib() {
         super.awakeFromNib()
     }

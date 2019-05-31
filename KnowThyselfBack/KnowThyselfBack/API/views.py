@@ -2,8 +2,8 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from bs4 import BeautifulSoup
 from rest_framework.decorators import api_view
-from .models import Type, Quadra, TypeShort
-from .serializers import TypeSerializer, TestSerializer, TypeShortSerializer, QuadraSerializer
+from .models import Type, Quadra, TypeShort, TypeTest
+from .serializers import TypeSerializer, TestSerializer, TypeShortSerializer, QuadraSerializer, TypeTestSerializer
 from rest_framework.response import Response
 from rest_framework.settings import api_settings
 from rest_framework.renderers import JSONRenderer
@@ -50,4 +50,19 @@ def typesShort(request):
     if request.method == "GET":
         types = TypeShort.objects.all()
         serializer = TypeShortSerializer(types, many=True)
+        return Response(serializer.data)
+
+
+@api_view(['GET', 'POST'])
+def types_test(request):
+    if request.method == "GET":
+        types_test = TypeTest.objects.all()
+        serializer = TypeTestSerializer(types_test, many=True)
+        return Response(serializer.data)
+
+    if request.method == "POST":
+        serializer = TypeTestSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
         return Response(serializer.data)

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Type, Test, TypeResult, Quadra, TypeShort
+from .models import Type, Test, TypeResult, Quadra, TypeShort, TypeTest
 
 
 class TypeSerializer(serializers.ModelSerializer):
@@ -31,3 +31,8 @@ class TypeShortSerializer(serializers.ModelSerializer):
         model = TypeShort
         fields = '__all__'
 
+
+class TypeTestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TypeTest
+        fields = '__all__'

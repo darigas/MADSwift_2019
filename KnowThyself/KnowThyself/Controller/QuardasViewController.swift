@@ -10,38 +10,37 @@ import UIKit
 import Alamofire
 
 class QuardasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return QuardasViewController.quadras.count
+        return QuardasViewController.quadrasTypes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "quadraCell") as! QuadraTableViewCell
-        cell.quadraName.text = QuardasViewController.quadras[indexPath.row].quadraName
-//        cell.quadraName.textColor = UIColor.red
-        cell.quadraInfo.text = QuardasViewController.quadras[indexPath.row].info
-        cell.quadraTypes.text = QuardasViewController.quadras[indexPath.row].types
-        cell.quadraInfo.font = UIFont(name: "Athelas", size: 18)
+        cell.quadraName.text = QuardasViewController.quadrasTypes[indexPath.row].quadraName
         cell.quadraName.font = UIFont(name: "Athelas", size: 18)
-        cell.quadraTypes.font = UIFont(name: "Athelas", size: 18)
+        cell.selectionStyle = .none
         return cell
     }
     
 
     @IBOutlet weak var quadras: UITableView!
-    static var quadras = [Quadra]()
+    
+    static var quadrasTypes = [Quadra]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        quadras.rowHeight = 500
         getQuadras()
         quadras.dataSource = self
         quadras.delegate = self
         self.tabBarItem.image = UIImage(named: "health_data")
-        quadras.rowHeight = UIScreen.main.fixedCoordinateSpace.bounds.height 
+//        quadras.rowHeight = UITableView.automaticDimension
+//        quadras.estimatedRowHeight = 600
+//        quadras.rowHeight = UIScreen.main.fixedCoordinateSpace.bounds.height
     }
     
     func getQuadras() {
-        TypesViewController.types.removeAll()
+//        TypesViewController.types.removeAll()
         Alamofire.request("http://127.0.0.1:8000/quadras").responseJSON { response in
             guard response.result.isSuccess else {
                 print("Ошибка при запросе данных \(String(describing: response.result.error))")
@@ -55,11 +54,20 @@ class QuardasViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             for quadraNew in arrayOfTypes {
                 let quadra = Quadra(quadraName: quadraNew["quadraName"] as! String, info: quadraNew["info"] as! String, types: quadraNew["types"] as! String)
-                QuardasViewController.quadras.append(quadra)
+                QuardasViewController.quadrasTypes.append(quadra)
 //                print(quadra.info)
+            }
+            print(QuardasViewController.quadrasTypes.count)
+            for i in 0..<QuardasViewController.quadrasTypes.count {
+                print(QuardasViewController.quadrasTypes[i].info)
             }
             self.quadras.reloadData()
         }
 //        print(QuardasViewController.quadras)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = QuadraTypeViewController.instantiate(quadraName: QuardasViewController.quadrasTypes[indexPath.row].quadraName, quadraInfo: QuardasViewController.quadrasTypes[indexPath.row].info)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }

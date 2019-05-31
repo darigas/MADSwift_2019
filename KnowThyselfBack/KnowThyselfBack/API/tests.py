@@ -9,11 +9,12 @@ class Click(TestCase):
 
     def __init__(self, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17, _18, _19, _20, _21,
                  _22, _23, _24, _25, _26, _27, _28):
+
         # options = Options()
         # options.add_argument("headless")
         self.driver = webdriver.Chrome('/Users/darigummy/Desktop/selenium/chromedriver')
-        self.driver.set_window_position(900, 0)
-        self.driver.set_window_size(100, 100)
+        # self.driver.set_window_position(900, 0)
+        # self.driver.set_window_size(100, 100)
         # self.driver.get('http://www.google.com/xhtml')
         self.navigate(_1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17, _18, _19, _20, _21,
                       _22, _23, _24, _25, _26, _27, _28)
